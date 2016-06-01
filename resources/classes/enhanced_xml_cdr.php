@@ -81,6 +81,26 @@ class enhanced_xml_cdr extends xml_cdr {
 			}
 		}
 	}
+
+	public function read_files(){
+		parent::read_files();
+
+		foreach ($this->plugins as $p){
+			if (method_exists($p, 'read_files')){
+				$p->read_files();
+			}
+		}
+	}
+
+	public function post(){
+		parent::post();
+
+		foreach ($this->plugins as $p){
+			if (method_exists($p, 'post')){
+				$p->post();
+			}
+		}
+	}
 }
 /*
 //example use
