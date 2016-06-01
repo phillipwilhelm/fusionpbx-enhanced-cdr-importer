@@ -1,4 +1,4 @@
-/*
+<?php /*
         FusionPBX
         Version: MPL 1.1
 
@@ -27,3 +27,4 @@ if (!class_exists('xml_cdr')) {
 	class plugin_template {
 	}
 }
+?>
