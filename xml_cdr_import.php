@@ -47,6 +47,6 @@
 
 //import from the file system
 	$cdr = new enhanced_xml_cdr;
-	$cdr->read_files();         // use ->post for HTTP
+	$cdr->post();         // use ->post for HTTP
 
 ?>

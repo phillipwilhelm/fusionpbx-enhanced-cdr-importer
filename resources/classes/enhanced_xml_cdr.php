@@ -13,13 +13,6 @@
 	for the specific language governing rights and limitations under the
 	License.
 
-	The Original Code is FusionPBX
-
-	The Initial Developer of the Original Code is
-	Mark J Crane <markjcrane@fusionpbx.com>
-	Portions created by the Initial Developer are Copyright (C) 2016
-	the Initial Developer. All Rights Reserved.
-
 	Contributor(s):
 	Luis Daniel Lucio Quiroz <dlucio@okay.com.mx>
 
@@ -36,7 +29,6 @@ if (!class_exists('xml_cdr')) {
 	require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/xml_cdr/resources/classes/xml_cdr.php';
 
 }
-
 
 require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/fusionpbx-enhanced-cdr-importer/resources/classes/plugin.php';
 
@@ -87,7 +79,7 @@ class enhanced_xml_cdr extends xml_cdr {
 
 		foreach ($this->plugins as $p){
 			if (method_exists($p, 'read_files')){
-				$p->read_files();
+				$p->read_files($this->array);
 			}
 		}
 	}
@@ -97,7 +89,7 @@ class enhanced_xml_cdr extends xml_cdr {
 
 		foreach ($this->plugins as $p){
 			if (method_exists($p, 'post')){
-				$p->post();
+				$p->post($this->array);
 			}
 		}
 	}
