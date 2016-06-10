@@ -30,7 +30,7 @@ if (!class_exists('xml_cdr')) {
 
 }
 
-require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/fusionpbx-enhanced-cdr-importer/resources/classes/plugin.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/fusionpbx-enhanced-cdr-importer/resources/classes/xml_import_plugin_template.php';
 
 class enhanced_xml_cdr extends xml_cdr {
 
