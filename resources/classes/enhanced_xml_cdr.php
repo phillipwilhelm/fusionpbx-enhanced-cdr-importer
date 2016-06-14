@@ -27,7 +27,6 @@
  */
 if (!class_exists('xml_cdr')) {
 	require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/xml_cdr/resources/classes/xml_cdr.php';
-
 }
 
 require_once $_SERVER["DOCUMENT_ROOT"] . PROJECT_PATH . '/app/fusionpbx-enhanced-cdr-importer/resources/classes/xml_import_plugin_template.php';
