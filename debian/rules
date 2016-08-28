@@ -50,7 +50,7 @@ install: build
 	# cd builddir && $(MAKE) INSTALL_ROOT=$(CURDIR)/debian/$(APPNAME) install
 	#rm -rf $(CURDIR)/debian/lookup-dbg
 	mkdir -p debian/fusionpbx-app-enhanced-cdr-importer/var/www/fusionpbx/app/enhanced_cdr_importer
-	cp -pr *.php debian/fusionpbx-app-enhanced-cdr-importer/var/www/fusionpbx/app/enhanced_cdr_importer
+	cp -pr *.php resources debian/fusionpbx-app-enhanced-cdr-importer/var/www/fusionpbx/app/enhanced_cdr_importer
 
 build-indep: build install
 
